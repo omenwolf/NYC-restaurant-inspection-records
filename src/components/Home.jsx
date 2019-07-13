@@ -39,12 +39,13 @@ class Home extends React.Component {
             <div style={{ height: "150px" }} />
           </Parallax>
         </div>
+        {/* mobile screen */}
         <div className="blue-grey lighten-5 hide-on-med-and-up">
           <main className="container search-bar">
             <h3 className="teal-text text-lighten-2 search-bar-text">
-              Poopers
+              Restaurant Inspection Records
             </h3>
-            <div className="section">TO DO: Search Form Component</div>
+            <div className="section"><Search/></div>
           </main>
         </div>
 

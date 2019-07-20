@@ -1,5 +1,6 @@
 import React from "react";
 import axios from 'axios';
+import {Input} from 'react-materialize';
 
 class Search extends React.Component {
   constructor(props) {
@@ -14,6 +15,8 @@ class Search extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // TODO: Initialize Materialize to have dropdown styling work
+  // !BUG: Small screen search unable to fill forms
 
 
   handleSubmit(e) {
@@ -85,7 +88,7 @@ class Search extends React.Component {
           </form>
         </div>
         {/* mobile viewer */}
-        <div className="row hide-on-med-and-up">
+        {/* <div className="row hide-on-med-and-up">
         <form onSubmit={this.handleSubmit} className="col s12 card" style={{padding: 20}}>
           <h5 className="">Find a restaurant</h5>
             <div className="row">
@@ -100,7 +103,6 @@ class Search extends React.Component {
                   required
                 />
               </div>
-              {/* borough dropdown */}
               <div className="input-field col s12 m4">
                 <label>Borough</label>
                 <i className="material-icons prefix">location_city</i>
@@ -127,7 +129,7 @@ class Search extends React.Component {
               </div>
             </div>
           </form>
-        </div>
+        </div> */}
 
       </div>
     );

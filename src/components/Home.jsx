@@ -45,6 +45,7 @@ class Home extends React.Component {
             <h3 className="teal-text text-lighten-2 search-bar-text">
               Restaurant Inspection Records
             </h3>
+            {/* TODO: potential fix here */}
             <div className="section"><Search/></div>
           </main>
         </div>

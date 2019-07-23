@@ -46,3 +46,9 @@ main {
 	display: inline-block !important;
 }
 
+/* React Routes Link */
+a {
+	text-decoration: inherit;
+	color: inherit;
+	cursor: auto;
+}

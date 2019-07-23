@@ -1,39 +1,66 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+
+import Grid from "@material-ui/core/Grid";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: "teal"
+  },
+  text: {
+    // BUG: not working
+    fontSize: "h1.fontSize"
+  }
+}));
 
 const Header = props => {
+  const classes = useStyles();
+
   return (
     <header>
-      <nav className="teal">
-        <div className="nav-wrapper container">
-          <ul>
-            <li>
-              <Link className="brand-logo truncate" to="/">
-                NYC Food Safety
+      {/* TODO: change color of navbar */}
+      {/* TODO: change font color */}
+      {/* TODO: change font style */}
+      {/* TODO: change font positioning */}
+      <AppBar className={classes.root}>
+        <Tabs className={classes.text}>
+          <Grid container direction="row" lg={10} justify="center">
+            <Grid
+              container
+              lg={4}
+              direction="row"
+              justify="flex-start"
+              alignItems="center"
+            >
+              <Link to="/">
+                <Tab label="NYC Food Safety" />
               </Link>
-              <Link
-                // TO DO: reusable side-bar nav component
-                to="#"
-                data-target="mobile-demo"
-                className="sidenav-trigger"
-              >
-                <i className="material-icons">menu</i>
+            </Grid>
+            <Grid
+              container
+              lg={6}
+              direction="row"
+              justify="flex-end"
+              alignItems="center"
+            >
+              <Link to="/">
+                <Tab label="Home" />
               </Link>
-            </li>
-          </ul>
-          <ul className="right hide-on-med-and-down">
-            <li className="li-home">
-              <Link to="/">Home</Link>
-            </li>
-            <li className="li-search">
-              <Link to="/search">Search</Link>
-            </li>
-            <li className="li-violation">
-              <Link to="/report-violations">Report Violations</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+              <Link to="/search">
+                <Tab label="Search" />
+              </Link>
+              <Link to="/report-violations">
+                <Tab label="Report Violations" />
+              </Link>
+            </Grid>
+          </Grid>
+        </Tabs>
+      </AppBar>
     </header>
   );
 };

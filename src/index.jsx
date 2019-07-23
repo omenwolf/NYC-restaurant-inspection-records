@@ -2,6 +2,8 @@ import React, { Suspense, Fragment, Component } from "react";
 import ReactDOM from "react-dom";
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 
+
+
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./components/Home.jsx";
@@ -10,6 +12,8 @@ import Search from "./components/Search.jsx";
 import SearchAdvanced from "./components/SearchAdvanced.jsx";
 import Report from "./components/Report.jsx";
 import NotFound from "./components/404.jsx";
+
+
 
 class App extends React.Component {
   constructor(props) {

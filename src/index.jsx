@@ -17,7 +17,6 @@ class App extends React.Component {
     this.state = {};
   }
 
-  // TODO: Compartmentalize Header & Footer (Modularity)
   render() {
     return (
       <Router>

@@ -41,6 +41,8 @@ main {
 }
 
 /* BUG: LIBRARY DEFULT `DISPLAY: NONE;` */
-#select-override {
+
+.select-override {
 	display: inline-block !important;
 }
+

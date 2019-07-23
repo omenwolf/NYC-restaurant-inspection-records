@@ -65,7 +65,7 @@ class Search extends React.Component {
                 <select
                   name="boro"
                   ref={this.boroInput}
-                  id="select-override"
+                  className="select-override"
                 >
                   {this.state.borough.map((boro, i) => (
                     <option key={i} value={boro.toUpperCase()}>{boro}</option>

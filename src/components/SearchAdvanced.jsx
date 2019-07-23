@@ -99,7 +99,7 @@ class SearchAdvanced extends React.Component {
                                         <input type="text" name="dba" ref={this.dbaInput} />
                                     </div>
                                     <div className="input-field col s12 m4">
-                                        <select id="select-override" name="boro" ref={this.boroInput}>
+                                        <select className="select-override" name="boro" ref={this.boroInput}>
                                             {this.state.borough.map((boro, i) => (
                                                 <option key={i} value={boro.toUpperCase()}>{boro}</option>
                                             ))}
@@ -110,7 +110,7 @@ class SearchAdvanced extends React.Component {
 
                                 <div className="row">
                                 <div className="input-field col s12 m8">
-                                        <select name="cuisine_description" id="select-override" ref={this.cuisineInput}>
+                                        <select name="cuisine_description" className="select-override" ref={this.cuisineInput}>
                                             <option value="" disabled selected>None</option>
                                             <CuisineMenu cuisines={this.state.cuisines} />
                                         </select>
